@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outils de la CPME Réunion</title>
+    <!-- Feuille de style CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <!-- Menu de navigation : START -->
+        <div class="navbar">
+            <h1 class="navbar-title">CPME Réunion</h1>
+
+            <ul class="navbar-list">
+                <li onclick="itemClick(0)" onmouseleave="itemMouseLeave(0)" onmouseover="itemMouseOver(0)"
+                    class="navbar-item">
+                    <img id="jsIcon-0" class="navbar-icon" src="images/icon-components-yellow.png"></img>
+                    <span>Composants de l'application</span>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Menu de navigation : END -->
+
+        <!-- Contenu : START -->
+        <div id="jsContent-0" class="content">
+            <h1 id="content-title">Choisissez un composant à créer</h1>
+
+            <!-- All components:START -->
+            <div class="flex-container" id="components-container">
+                <div class="content-card">
+                    <h2 class="card-title">Images</h2>
+                    <img class="card-img" src="images/icon-img.png">
+                    <button onclick="selectedCard(0)" class="card-btn">Créer une image</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Vidéos</h2>
+                    <img class="card-img" src="images/icon-video.png">
+                    <button onclick="selectedCard(1)" class="card-btn">Créer une vidéo</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Boutons</h2>
+                    <img class="card-img" src="images/icon-btn.png">
+                    <button onclick="selectedCard(2)" class="card-btn">Créer un bouton</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Autres composants</h2>
+                    <img class="card-img" src="images/icon-more.png">
+                    <button onclick="selectedCard(3)" class="card-btn">Créer un autre composant</button>
+                </div>
+            </div>
+            <!-- All components : END-->
+
+
+            <!-- Contenu-Images : START -->
+
+            <div class="flex-container" id="components-image-container">
+                <div id="image-creator">
+                    <div id="image-set">
+                        <h2 class="creator-set-title">Réglages de l'image</h2>
+                        <div class="form-group">
+                            <label class="label">Url du fichier</label>
+                            <input type="text" placeholder="..." id="jsImage-url">
+                        </div>
+                        <div class="form-group">
+                            <label class="label">Hauteur de l'image</label>
+                            <input onchange="changeImageHeight(this.value)" type="range" id="jsImage-height" min="50" max="300" step="5" value="50">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label">Largeur de l'image</label>
+                            <input onchange="changeImageWidth(this.value)" type="range" id="jsImage-width" min="25" max="100" step="5" value="25">
+                        </div>
+                        <div class="form-group">
+                            <label class="label">Arrondissement de l'image</label>
+                            <input onchange="changeImageBorderRadius(this.value)" type="range" id="jsImage-borderRadius" min="0" max="50" step="1" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label class="label">Epaisseur de la bordure</label>
+                            <input onchange="changeImageBorderWidth(this.value)" type="range" id="jsImage-borderWidth" min="1" max="10" step="1" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label class="label">Couleur de la bordure</label>
+                            <select onchange="changeImageBorderColor(this.value)" id="jsImage-borderColor">
+                                <option value="transparent">Transparente</option>
+                                <option value="#114d61">Bleu</option>
+                                <option value="#00adb9">Bleu clair</option>
+                                <option value="#e74023">Orange</option>
+                                <option value="#ec694a">Orange Clair</option>
+                        </select>
+                        </div>
+
+                            <button onclick="getImage()" class="get-btn">Réinitialiser</button>
+                    </div>
+                    <div id="image-show">
+                        <h2 class="creator-show-title">Résultat</h2>
+                        <div style="height: auto;width: 90%;margin: auto;display: flex;align-items: center;justify-content: center;background: #ececec;" id="image-result-container">
+                            <img style="max-width: 100%;max-height: 100%;border-style: solid;border-color: transparent;" id="image-result-img" src="https://picsum.photos/200/200" alt="">
+                        </div>
+                        <button onclick="getImage()" class="get-btn">Copier le code</button>
+                        <input id="copyInput" type="text"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenu-Images : END -->
+
+            <!-- Contenu-Vidéos : START -->
+
+            <div class="flex-container" id="components-video-container">
+                <div class="content-card">
+                    <h2 class="card-title">Images2</h2>
+                    <img class="card-img" src="images/icon-img.png">
+                    <button onclick="selectedCard(0)" class="card-btn">Créer une image</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Vidéos</h2>
+                    <img class="card-img" src="images/icon-video.png">
+                    <button onclick="selectedCard(1)" class="card-btn">Créer une vidéo</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Boutons</h2>
+                    <img class="card-img" src="images/icon-btn.png">
+                    <button onclick="selectedCard(2)" class="card-btn">Créer un bouton</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Autres composants</h2>
+                    <img class="card-img" src="images/icon-more.png">
+                    <button onclick="selectedCard(3)" class="card-btn">Créer un autre composant</button>
+                </div>
+            </div>
+
+            <!-- Contenu-Vidéos : END -->
+
+            <!-- Contenu-Boutons : START -->
+
+            <div class="flex-container" id="components-btn-container">
+                <div class="content-card">
+                    <h2 class="card-title">Images2</h2>
+                    <img class="card-img" src="images/icon-img.png">
+                    <button onclick="selectedCard(0)" class="card-btn">Créer une image</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Vidéos</h2>
+                    <img class="card-img" src="images/icon-video.png">
+                    <button onclick="selectedCard(1)" class="card-btn">Créer une vidéo</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Boutons</h2>
+                    <img class="card-img" src="images/icon-btn.png">
+                    <button onclick="selectedCard(2)" class="card-btn">Créer un bouton</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Autres composants</h2>
+                    <img class="card-img" src="images/icon-more.png">
+                    <button onclick="selectedCard(3)" class="card-btn">Créer un autre composant</button>
+                </div>
+            </div>
+
+            <!-- Contenu-Boutons : END -->
+
+            <!-- Contenu-More : START -->
+
+            <div class="flex-container" id="components-more-container">
+                <div class="content-card">
+                    <h2 class="card-title">Images2</h2>
+                    <img class="card-img" src="images/icon-img.png">
+                    <button onclick="selectedCard(0)" class="card-btn">Créer une image</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Vidéos</h2>
+                    <img class="card-img" src="images/icon-video.png">
+                    <button onclick="selectedCard(1)" class="card-btn">Créer une vidéo</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Boutons</h2>
+                    <img class="card-img" src="images/icon-btn.png">
+                    <button onclick="selectedCard(2)" class="card-btn">Créer un bouton</button>
+                </div>
+
+                <div class="content-card">
+                    <h2 class="card-title">Autres composants</h2>
+                    <img class="card-img" src="images/icon-more.png">
+                    <button onclick="selectedCard(3)" class="card-btn">Créer un autre composant</button>
+                </div>
+            </div>
+
+            <!-- Contenu-More : END -->
+        </div>
+        <!-- Contenu : END -->
+    </div>
+</body>
+<script src="app.js"></script>
+</body>
+
+</html>
