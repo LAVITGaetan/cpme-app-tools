@@ -8,7 +8,7 @@
 :root {
     --dark-background: #383C48;
     --dark-background-lighter: #383C4890;
-    --yellow: #FFBC3D;
+    --yellow: #399cc4;
     --yellow-lighter: #FFBC3D90;
     --light-background: #EEEFF1;
     --white: #fff;
@@ -22,7 +22,7 @@
 
 /* Menu de navigation : START */
 .navbar {
-    width: 30%;
+    width: 25%;
     height: 100vh;
     background: var(--dark-background);
     position: fixed;
@@ -72,20 +72,24 @@
 /* Content : START */
 
 .content {
-    width: 70%;
+    position: absolute;
+    width: 75%;
     background: var(--light-background);
-    display: none;
-    margin-left: 30%;
+    /*display: none;*/
+    margin-left: 25%;
+    height: 100vh;
+    top: 0;
 }
 
 #content-title {
-    font-size: 25px;    font-weight: bold;
+    font-size: 25px;    
+    font-weight: bold;
     font-style: italic;
     color: var(--yellow);
     text-shadow: 1px 1px 1px #383C48;
     font-weight: bold;
     text-align: center;
-    width: 90%;
+    width: 100%;
     padding: 2rem;  
 }
 
@@ -191,7 +195,6 @@
 
 .get-btn {
     transition: .3s ease-out;
-    width: 60%;
     padding: 12px;
     background: var(--yellow);
     border: 2px solid var(--dark-background);
@@ -222,3 +225,94 @@
 /* Content : END */
 
 
+/* Composant images */
+
+#image-radius-0 {
+    width: 48px;
+    height: 48px;
+    box-shadow: 3px 3px 5px 1px #00000025;
+    background: var(--dark-background);
+}
+
+#image-radius-10 {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 1px #00000025;
+    background: var(--dark-background);
+}
+
+#image-radius-50 {
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px 1px #00000025;
+    background: var(--dark-background);
+}
+
+.image-settings-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+}
+
+.setting-text {
+    background: var(--white);
+    color: var(--dark-background);
+    font-size: 17px;
+    padding: 8px 12px;
+    display: block;
+    box-shadow: 3px 3px 5px 1px #00000025;
+    min-width: 100px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.setting-text:hover{
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.url-group {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#url-input, #text-input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid var(--dark-background);
+}
+
+/*Button*/
+
+
+.secondary-title{
+    font-size: 22px;    
+    font-weight: bold;
+    font-style: italic;
+    color: var(--yellow);
+    text-shadow: 1px 1px 1px #383C48;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 1rem; 
+}
+
+.btn{
+    font-size: 17px;
+    padding: 12px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.btn-underline{
+text-decoration: underline;
+}
+
+.btn-filled {
+    color: var(--white);
+}

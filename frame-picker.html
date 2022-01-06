@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpme Tools - Créer une vidéo</title>
+    <!-- Feuille de style CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="image-settings-container">
+        <!-- Menu de navigation : START -->
+        <div class="navbar">
+            <h1 class="navbar-title">CPME Réunion</h1>
+
+            <ul class="navbar-list">
+                <li onclick="itemClick(0)" onmouseleave="itemMouseLeave(0)" onmouseover="itemMouseOver(0)"
+                    class="navbar-item">
+                    <img id="jsIcon-0" class="navbar-icon" src="images/icon-components-yellow.png"></img>
+                    <span>Composants de l'application</span>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Menu de navigation : END -->
+
+        <!-- Contenu : START -->
+        <div class="content">
+            <h1 id="content-title">Créer un composant Vidéo</h1>
+
+            <div style="background:#fff;border:2px solid #383C48;height: auto;min-height:200px;max-height:200px;max-width: 360px;margin: auto;display: flex;align-items: center;justify-content: center;background: #ececec;" id="image-result-container">
+                <iframe frameBorder="0" id="image-result-video" style="width: 100%;" src="https://www.youtube.com/embed/T8vRO2IaQGY"></iframe>
+            </div>
+            <div class="url-group">
+            <input oninput="changeFrameUrl(this.value)" id="url-input" type="text" placeholder="Url de votre fichier ..."/>
+            <a style="font-size: 16px; margin-top: .5rem;" href="https://www.zupimages.net/">Lien vers un hébérgeur d'images gratuit</a>
+        </div>
+            <div class="image-settings-container">
+                <div onclick="changeVideoBorderRadius(0)" id="image-radius-0"></div>
+                <div onclick="changeVideoBorderRadius(10)" id="image-radius-10"></div>
+                <div onclick="changeVideoBorderRadius(50)"id="image-radius-50"></div>
+            </div>
+            <div class="image-settings-container">
+                <div class="setting-text" onclick="changeVideoBorderColor('#114d61')" id="image-color-blue">blue</div>
+                <div class="setting-text" onclick="changeVideoBorderColor('#e74023')" id="image-color-orange">orange</div>
+                <div class="setting-text" onclick="changeVideoBorderColor('#333')"id="image-color-grey">grey</div>
+            </div>
+            <div class="image-settings-container">
+                <div class="setting-text" onclick="changeVideoBorderWidth(10)" id="image-color-blue">grande</div>
+                <div class="setting-text" onclick="changeVideoBorderWidth(5)" id="image-color-orange">moyenne</div>
+                <div class="setting-text" onclick="changeVideoBorderWidth(1)"id="image-color-grey">petite</div>
+            </div>
+            <button onclick="getFrame()" class="get-btn">Copier le code</button>
+            <input id="copyVideo" type="text"/>
+        </div>
+        <!-- Contenu : END -->
+    </div>
+</body>
+<script src="app.js"></script>
+</body>
+
+</html>

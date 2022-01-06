@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpme Tools - Créer un bouton de téléchargement</title>
+    <!-- Feuille de style CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="image-settings-container">
+        <!-- Menu de navigation : START -->
+        <div class="navbar">
+            <h1 class="navbar-title">CPME Réunion</h1>
+
+            <ul class="navbar-list">
+                <li onclick="itemClick(0)" onmouseleave="itemMouseLeave(0)" onmouseover="itemMouseOver(0)"
+                    class="navbar-item">
+                    <img id="jsIcon-0" class="navbar-icon" src="images/icon-components-yellow.png"></img>
+                    <span>Composants de l'application</span>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Menu de navigation : END -->
+
+        <!-- Contenu : START -->
+        <div class="content">
+            <h1 id="content-title">Créer un composant Téléchargeable</h1>
+            <div class="url-group">
+                <input oninput="changeButtonUrl(this.value)" id="url-input" type="text"
+                    placeholder="Url de votre fichier ..." />
+                <input style="margin-top: 1rem;" oninput="changeButtonText(this.value)" id="text-input" type="text"
+                    placeholder="Entre le texte de votre bouton" />
+                <a style="font-size: 16px; margin-top: .5rem;" href="https://app.mediafire.com/">Lien vers un hébérgeur
+                    de fichiers gratuit (provisoire)</a>
+            </div>
+            <div class="image-settings-container">
+                <div onclick="changeButtonBorderRadius(0)" id="image-radius-0"></div>
+                <div onclick="changeButtonBorderRadius(10)" id="image-radius-10"></div>
+                <div onclick="changeButtonBorderRadius(50)" id="image-radius-50"></div>
+            </div>
+            <h2 class="secondary-title">Cliquez sur un des boutons pour le copier</h2>
+            <div class="image-settings-container" style="background-color: white; padding: 1rem ;flex-wrap: wrap;">
+                <div class="btn btn-underline" style="color: #114d61;font-weight: bold;" id="btn-type-0"
+                    onclick="getButton('underline','#114d61')">Bouton 1</div>
+                <div style="border: 2px solid #114d61; color:#114d61" class="btn" id="btn-type-1"
+                    onclick="getButton('outline','#114d61')">Bouton 2</div>
+                <div class="btn btn-filled" style="background-color: #114d61;" id="btn-type-2"
+                    onclick="getButton('filled','#114d61')">Bouton 3
+                </div>
+                <div class="btn btn-underline" style="color: #e74023;background: #fff;font-weight: bold;"
+                    id="btn-type-3" onclick="getButton('underline','#e74023')">Bouton 4</div>
+                <div class="btn" style="border: 2px solid #e74023; color: #e74023;" id="btn-type-4" onclick="getButton('outline','#e74023')">Bouton 5
+                </div>
+                <div class="btn btn-filled" style="background-color: #e74023;" id="btn-type-5" onclick="getButton('filled','#e74023')">
+                    Bouton 6
+                </div>
+                <div class="btn btn-underline" style="color: #00adb9;background: #fff;font-weight: bold;"
+                    id="btn-type-6" onclick="getButton('underline','#114d61')">Bouton 7</div>
+                <div class="btn" style="border: 2px solid #00adb9;color: #00adb9;" id="btn-type-7" onclick="getButton('outline','#00adb9')">Bouton 8
+                </div>
+                <div class="btn btn-filled" style="background-color: #00adb9;" id="btn-type-8" onclick="getButton('filled','#00adb9')">
+                    Bouton 9
+                </div>
+
+            </div>
+            <input id="copyButton" type="text" />
+        </div>
+        <!-- Contenu : END -->
+    </div>
+</body>
+<script src="app.js"></script>
+</body>
+
+</html>

@@ -20,8 +20,13 @@
                 <li onclick="itemClick(0)" onmouseleave="itemMouseLeave(0)" onmouseover="itemMouseOver(0)"
                     class="navbar-item">
                     <img id="jsIcon-0" class="navbar-icon" src="images/icon-components-yellow.png"></img>
-                    <span>Composants de l'application</span>
+                    <span>Créer un composant</span>
                 </li>
+                <li onclick="document.location.replace('image-picker.html')" onmouseleave="itemMouseLeave(1)" onmouseover="itemMouseOver(1)"
+                class="navbar-item">
+                <img id="jsIcon-0" class="navbar-icon" src="images/icon-components-yellow.png"></img>
+                <span>Composants de l'application</span>
+            </li>
 
             </ul>
         </div>
@@ -103,7 +108,7 @@
                     <div id="image-show">
                         <h2 class="creator-show-title">Résultat</h2>
                         <div style="height: auto;width: 90%;margin: auto;display: flex;align-items: center;justify-content: center;background: #ececec;" id="image-result-container">
-                            <img style="max-width: 100%;max-height: 100%;border-style: solid;border-color: transparent;" id="image-result-img" src="https://picsum.photos/200/200" alt="">
+                            <img style="width: 100%;max-height: 100%;border-style: solid;border-color: transparent;" id="image-result-img" src="https://picsum.photos/200/200" alt="">
                         </div>
                         <button onclick="getImage()" class="get-btn">Copier le code</button>
                         <input id="copyInput" type="text"/>
@@ -147,7 +152,7 @@
 
             <div class="flex-container" id="components-btn-container">
                 <div class="content-card">
-                    <h2 class="card-title">Images2</h2>
+                    <h2 class="card-title">Images</h2>
                     <img class="card-img" src="images/icon-img.png">
                     <button onclick="selectedCard(0)" class="card-btn">Créer une image</button>
                 </div>
