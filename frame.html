@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une vidéo</title>
+    <link rel="stylesheet" href="style0.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 class="navbar-title">CPME Réunion</h1>
+        <ul class="navbar-list">
+            <li class="navbar-listItem"><img class="navbar-listIcon" src="image/image.png">
+                <p class="navbar-listText">Images</p>
+            </li>
+            <li class="navbar-listItem"><img class="navbar-listIcon" src="image/video.png">
+                <p class="navbar-listText">Vidéos</p>
+            </li>
+            <li class="navbar-listItem"><img class="navbar-listIcon" src="image/bouton.png">
+                <p class="navbar-listText">Boutons</p>
+            </li>
+            <li class="navbar-listItem"><img class="navbar-listIcon" src="image/autres.png">
+                <p class="navbar-listText">Autres composants</p>
+            </li>
+        </ul>
+    </div>
+    <div class="flex-container">
+        <div class="content-image">
+            <div class="content-image-result">
+                <h3 class="content-subtitle">Résultat final</h3>
+                <div id="image-result-container">
+                    <iframe frameBorder="0" id="image-result-video" style="width: 100%;" src="https://www.youtube.com/embed/T8vRO2IaQGY"></iframe>
+            </div>
+            </div>
+            <button onclick="getFrame()" class="btn-code">Récupérer le code</button>
+        </div>
+        <div class="content-toolRadius">
+            <div onclick="changeFrameBorderRadius(0)" class="toolRadius-element">
+                <div class="toolRadius-none"></div>
+            </div>
+            <div onclick="changeFrameBorderRadius(10)" class="toolRadius-element">
+                <div class="toolRadius-small"></div>
+            </div>
+            <div onclick="changeFrameBorderRadius(50)" class="toolRadius-element">
+                <div class="toolRadius-round"></div>
+            </div>
+        </div>
+        <div class="content-settings">
+            <input id="copyFrame" type="text" />
+
+            <div class="url-group">
+                <input oninput="changeFrameUrl(this.value)" id="url-input" type="text" placeholder="Url de votre fichier ..." />
+                <a id="url-extra" href="https://www.zupimages.net/">Lien vers un hébérgeur
+                    d'images (provisoire)</a>
+            </div>
+            <h3 class="settings-title">Apparence</h3>
+
+            <div class="apparence-container">
+                <div onclick="changeFrameApparence(0)" class="apparence-card">
+                    <div id="imageBorder1"></div>
+                </div>
+                <div onclick="changeFrameApparence(1)" class="apparence-card">
+                    <div id="imageBorder2"></div>
+                </div>
+                <div onclick="changeFrameApparence(2)" class="apparence-card">
+                    <div id="imageBorder3"></div>
+                </div>
+                <div onclick="changeFrameApparence(3)" class="apparence-card">
+                    <div id="imageBorder4"></div>
+                </div>
+                <div onclick="changeFrameApparence(4)" class="apparence-card">
+                    <div id="imageBorder5"></div>
+
+                </div>
+                <div onclick="changeFrameApparence(5)" class="apparence-card">
+                    <div id="imageBorder6"></div>
+
+                </div>
+                <div onclick="changeFrameApparence(6)" class="apparence-card">
+                    <div id="imageBorder7"></div>
+
+                </div>
+                <div onclick="changeFrameApparence(7)" class="apparence-card">
+                    <div id="imageBorder8"></div>
+                </div>
+                <div onclick="changeFrameApparence(8)" class="apparence-card">
+                    <div id="imageBorder9"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
